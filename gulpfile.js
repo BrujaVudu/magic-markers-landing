@@ -17,7 +17,7 @@ gulp.task('css', function() {
 });
 
 gulp.task('html', function() {
-  return gulp.src('public/app/views/**/*.html')
+  return gulp.src('index.html')
     .pipe(livereload());
 });
 
