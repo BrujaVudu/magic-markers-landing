@@ -5,7 +5,7 @@
 
 	<meta charset="utf-8">
 
-	<link rel="stylesheet" type="text/css" href="css/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/style.min.css">
 
 	<script src="https://use.typekit.net/tbn4grx.js"></script>
@@ -207,31 +207,50 @@ CLIENTES QUE NOS HAN ELEGIDO</h1>
 			<div class="questions">
 				<ul>
 					<li>
-						<h3>¿CUÁNTO CUESTA UN VÍDEO?</h3>
-						<p>
-							Sabemos que esta no es la respuesta que quieres oír, pero... depende. El precio oscila alrededor de 4.8 millones de pesos más IVA por minuto de video. Sin embargo, puede ser más caro o más barato dependiendo de varios factores, como la técnica, el volumen de trabajo, las fechas de entrega, los acuerdos de pago o versiones en otros idiomas. 
-						</p>
-						<div class="links">
-							<a href="#contact">
-								<i class="glyphicon glyphicon-arrow-right"></i>
-								Solicitar información
-							</a>
+						<a href="#collapseExample1" data-toggle="collapse">
+							<h3>¿CUÁNTO CUESTA UN VÍDEO?</h3>
+							<img src="img/collapse.png" class="collapse-btn">
+						</a>
+						<div class="collapse" id="collapseExample1">
+							<p>
+								Sabemos que esta no es la respuesta que quieres oír, pero... depende. El precio oscila alrededor de 4.8 millones de pesos más IVA por minuto de video. Sin embargo, puede ser más caro o más barato dependiendo de varios factores, como la técnica, el volumen de trabajo, las fechas de entrega, los acuerdos de pago o versiones en otros idiomas. 
+							</p>
+							<div class="links">
+								<a href="#contact">
+									<i class="glyphicon glyphicon-arrow-right"></i>
+									Solicitar información
+								</a>
+							</div>
 						</div>
 					</li>
 					<li>
-						<h3>¿QUÉ TIPO DE COSAS EXPLICAN?</h3>
+						<a href="#collapseExample2" data-toggle="collapse">
+							<h3>¿QUÉ TIPO DE COSAS EXPLICAN?</h3>
+							<img src="img/collapse.png" class="collapse-btn">
+						</a>
+						<div class="collapse" id="collapseExample2">
 						<p>
 							Lo que sea. Naturalmente, no somos expertos en todos los temas, pero aceptamos retos diversos porque nos gusta desenredar ideas complejas. Si quieres algunos ejemplos, nos llaman para explicar procedimientos, leyes, argumentos, servicios nuevos y asuntos científicos, entre muchas otras cosas. En últimas, son nuestros clientes los que traen la información; nuestro trabajo es entender y organizar aquello que nos enseñan.
 						</p>
+						</div>
 					</li>
 					<li>
-						<h3>¿CUÁNTO SE DEMORAN HACIENDO UN VIDEO?</h3>
+						<a href="#collapseExample3" data-toggle="collapse">
+							<h3>¿CUÁNTO SE DEMORAN HACIENDO UN VIDEO?</h3>
+							<img src="img/collapse.png" class="collapse-btn">
+						</a>
+						<div class="collapse" id="collapseExample3">
 						<p>
 							Normalmente, un proyecto se tarda entre uno y dos meses. Se puede hacer un video más rápido, pero todo depende de tres factores: nuestra disponibilidad de agenda, la complejidad de la información y la agilidad en las aprobaciones.
 						</p>
+						</div>
 					</li>
 					<li>
-						<h3>¿CÓMO ES EL PROCESO DE TRABAJO?</h3>
+						<a href="#collapseExample4" data-toggle="collapse">
+							<h3>¿CÓMO ES EL PROCESO DE TRABAJO?</h3>
+							<img src="img/collapse.png" class="collapse-btn">
+						</a>
+						<div class="collapse" id="collapseExample4">
 						<p>
 							Primero, nos ponemos en contacto con ustedes para definir los puntos básicos, como fechas de entrega, presupuesto, objetivos y estrategia de difusión.
 						</p>
@@ -241,9 +260,14 @@ CLIENTES QUE NOS HAN ELEGIDO</h1>
 						<p>
 							¿Y la difusión? Pues hay casos en los que el cliente se encarga y hay casos en los que nosotros publicamos el video en nuestras redes sociales. Toca charlarlo.
 						</p>
+						</div>
 					</li>
 					<li>
-						<h3>¿POR QUÉ HACER UN VIDEO EXPLICATIVO?</h3>
+						<a href="#collapseExample5" data-toggle="collapse">
+							<h3>¿POR QUÉ HACER UN VIDEO EXPLICATIVO?</h3>
+							<img src="img/collapse.png" class="collapse-btn">
+						</a>
+						<div class="collapse" id="collapseExample5">
 						<p>
 							No somos muy fanáticos de las listas, pero en este caso, viene bien:
 						</p>
@@ -254,6 +278,7 @@ CLIENTES QUE NOS HAN ELEGIDO</h1>
 							<li>Porque se puede repetir información muchas veces sin distorsionar el mensaje.</li>
 							<li>Porque es más económico que lidiar con malentendidos a gran escala.</li>
 						</ul>
+						</div>
 					</li>
 				</ul>
 			</div>
@@ -328,16 +353,16 @@ CLIENTES QUE NOS HAN ELEGIDO</h1>
 			<div id="contact-area">
 			
 				<form method="post" action="contactengine.php">
-					<label for="Name">Name:</label>
+					<label for="Name">Nombre:</label>
 					<input type="text" name="Name" id="Name" />
 					
-					<label for="City">City:</label>
+					<label for="City">Teléfono:</label>
 					<input type="text" name="City" id="City" />
 		
 					<label for="Email">Email:</label>
 					<input type="text" name="Email" id="Email" />
 					
-					<label for="Message">Message:</label><br />
+					<label for="Message">Mensaje:</label><br />
 					<textarea name="Message" rows="20" cols="20" id="Message"></textarea>
 
 					<input type="submit" name="submit" value="Submit" class="submit-button" />
@@ -358,6 +383,9 @@ CLIENTES QUE NOS HAN ELEGIDO</h1>
 	<div id="left"></div>
 	<div id="right"></div>
 	<div id="bottom"></div>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 </body>
 </html>

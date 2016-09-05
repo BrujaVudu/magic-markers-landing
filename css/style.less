@@ -67,7 +67,11 @@ h1, h2, h3 {
   // height: @border-width;
 }
 
-#bottom { bottom: 0; }
+#bottom { 
+  bottom: 0;
+  height: @border-width;
+  position: relative;
+}
 #top {
   top: 0;
   height: @border-width-top;
@@ -81,7 +85,7 @@ header {
   font-weight: 700;
   line-height: @border-width-top;
   // font-size: 1.2em;
-  overflow: auto;
+  overflow: hidden;
 }
 
 header > .wrapper {
@@ -162,10 +166,14 @@ section#main p {
 
 div.links {
   font-weight: 700;
+  font-family: @heading-font;
+  text-transform: uppercase;
   margin-top: 30px;
 }
 
 div.links a {
+  border: solid 3px @yellow;
+  padding: 5px 10px;
   color: #000;
   margin-right: 30px;
 }
@@ -183,6 +191,8 @@ div.links .glyphicon {
   color: @white;
   margin-bottom: -3px;
   margin-right: 5px;
+
+  display: none;
 }
 
 section#main div#logo {
@@ -196,8 +206,13 @@ section#main div#logo {
   margin-right: 100px;
 }
 
+section#main h1 > br {
+  display: inline;
+}
+
 section#main div#intro {
-  overflow: auto;
+  margin-left: 100px;
+  margin-top: 100px;
 }
 
 .arrow-down {
@@ -244,7 +259,7 @@ section#quienes > .wrapper > h2 {
   display: inline-block;
   text-transform: uppercase;
   font-size: 2em;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   color: @yellow;
 }
 
@@ -278,7 +293,7 @@ section#quienes > .wrapper > .col-right {
   top: 0;
   width: 420px;
   // margin-right: 100px;
-  margin-top: 270px;
+  margin-top: 250px;
 }
 
 section#trabajo div.videos > ul {
@@ -320,7 +335,6 @@ section#clientes div.clients > ul > li {
 section#clientes div.clients > ul#r2 {
   width: 75%;
   float: none;
-  
 }
 
 section#clientes div.clients > ul > li > img {
@@ -353,7 +367,7 @@ section#faq div.questions > ul > li {
   margin-bottom: 20px;
 }
 
-section#faq div.questions > ul > li > h3 {
+section#faq div.questions > ul > li > a > h3 {
   font-size: 1.4em;
   // margin-top: 25px;
   color: @blue;
@@ -365,7 +379,13 @@ section#faq div.questions > ul > li > h3 {
 
 section#numbers {
   // background-color: #fff;
-  padding: 0px 0 0px;
+  padding: 0px 0 30px;
+  overflow: hidden;
+}
+
+
+section#numbers::after {
+  content: " ";
   overflow: auto;
 }
 
@@ -396,11 +416,16 @@ section#numbers div.numbers > ul > li > h3 {
   margin: 0;
 }
 
+section#info {
+  // clear: both;
+}
+
 section#info div.contact > ul {
   list-style: none;
   padding: 0;
   width: 80%;
   margin: 0 auto;
+  overflow: auto;
 }
 
 section#info div.contact > ul > li {
@@ -426,7 +451,8 @@ section#info div.contact span {
 }
 
 section {
-  overflow: auto;
+  // overflow: auto;
+  padding-bottom: 30px;
 }
 
 
@@ -479,18 +505,150 @@ label {
   font-size: 1.2em;
 }
 
+img.collapse-btn {
+  width: 25px;
+  margin-left: 5px;
+  margin-top: -8px;
+}
+
 /* MEDIA QUERIES
 ====================== */
 
-@media screen and (min-width: @screen-sm) {
+@media screen and (max-width: 1380px) {
+  @border-width: 40px;
 
-  section#main br {
-    display: inline;
+  #left, #right {
+    top: 0; bottom: 0;
+    width: @border-width;
+  }
+
+  body > .wrapper {
+    padding: @border-width-top @border-width @border-width;
+  }
+
+  section#main div#logo {
+    margin-right: 50px;
+    margin-left: 50px;
   }
 
   section#main div#intro {
-    margin-left: 100px;
-    margin-top: 100px;
+    margin-left: 50px;
+    // margin-top: 50px;
   }
 
+  section#quienes > .wrapper {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  section#quienes > .wrapper > .col-right {
+    width: 350px;
+  }
+
+  section#trabajo div.videos > ul {
+    padding: 0 35px;
+  }
+
+  section#clientes div.clients {
+    width: 100%;
+  }
+
+  section#faq div.questions {
+    width: 100%;
+    padding: 0 50px 0 70px;
+  }
+
+  section#numbers div.numbers > ul {
+    width: 100%;
+    padding: 0 50px;
+  }
+
+  section#info div.contact > ul {
+    width: 100%;
+    padding: 0 50px;
+  }
+}
+
+@media screen and (max-width: 1185px) {
+
+  @logo-size: 400px;
+
+  section#main div#logo {
+    background-size: @logo-size;
+    width: @logo-size;
+    height: @logo-size;
+    margin-top: 30px;
+  }
+
+  section#quienes > .wrapper > p {
+    max-width: 520px;
+  }
+
+
+}
+
+@media screen and (max-width: 1085px) {
+  section#main div#logo {
+    display: none;
+  }
+
+  section#quienes .col-right {
+    display: none;
+  }
+
+  section#main p {
+    max-width: 100%;
+    margin-right: 50px;
+  }
+
+  section#quienes > .wrapper > p {
+    max-width: 100%;
+  }
+
+
+}
+
+@media screen and (max-width: 820px) {
+
+  header > .wrapper {
+  margin: 0 50px;
+}
+
+  #left, #right {
+    top: 0; bottom: 0;
+    width: 0;
+  }
+
+  header .references {
+    padding-top: 15px;
+  }
+
+  header .references span {
+    // float: right;
+    display: block;
+    line-height: 30px;
+  }
+
+  body > .wrapper {
+    padding: @border-width-top 0 @border-width;
+  }
+
+  section#trabajo div.videos > ul > li {
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 615px) {
+  section#main h1 > br{
+    display: none;
+  }
+
+  section#main h1 {
+    padding-right: 50px;
+  }
+
+  div.links a {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
 }
