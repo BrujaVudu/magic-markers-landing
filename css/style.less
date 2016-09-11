@@ -36,8 +36,8 @@ body {
   font-size: 18px;
 }
 
-a, a:hover {
-  text-decoration: none;
+a, a:hover, a:active, a:visited, a:link {
+  text-decoration: none !important;
 }
 
 p {
@@ -69,8 +69,14 @@ h1, h2, h3 {
 
 #bottom { 
   bottom: 0;
-  height: @border-width;
+  height: auto;
+  padding: 20 0px;
   position: relative;
+}
+
+#bottom > .wrapper {
+  padding: 20px 0;
+  color: #aaa;
 }
 #top {
   top: 0;
@@ -88,7 +94,7 @@ header {
   overflow: hidden;
 }
 
-header > .wrapper {
+header > .wrapper, div#bottom > .wrapper {
   margin: 0 @border-width;
 }
 
@@ -260,7 +266,7 @@ section#quienes > .wrapper > h2 {
   text-transform: uppercase;
   font-size: 2em;
   margin-bottom: 30px;
-  color: @yellow;
+  color: @blue;
 }
 
 section#quienes > .wrapper > h2.secondary {
@@ -269,7 +275,7 @@ section#quienes > .wrapper > h2.secondary {
 }
 
 section#quienes > .wrapper > p {
-  max-width: 620px;
+  max-width: 640px;
 }
 
 .videoWrapper {
@@ -291,9 +297,9 @@ section#quienes > .wrapper > .col-right {
   position: absolute;
   right: 100px;
   top: 0;
-  width: 420px;
+  width: 400px;
   // margin-right: 100px;
-  margin-top: 190px;
+  margin-top: 150px;
 }
 
 section#trabajo div.videos > ul {
@@ -528,6 +534,17 @@ section > .wrapper {
   margin: 0 auto !important;
 }
 
+body.feedback {
+  text-align: center;
+  padding-top: 50px;
+}
+
+body.feedback > h1 {
+  color: @blue;
+  margin-bottom: 10px;
+  font-size: 4em;
+}
+
 /* MEDIA QUERIES
 ====================== */
 
@@ -554,8 +571,8 @@ section > .wrapper {
   }
 
   section#quienes > .wrapper {
-    margin-left: 50px;
-    margin-right: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   section#quienes > .wrapper > .col-right {
@@ -631,7 +648,7 @@ section > .wrapper {
 
 @media screen and (max-width: 820px) {
 
-  header > .wrapper {
+  header > .wrapper, div#bottom > .wrapper {
   margin: 0 50px;
 }
 
@@ -747,8 +764,8 @@ section > .wrapper {
   }
 
   section#quienes > .wrapper {
-    margin-left: 20px;
-    margin-right: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   section#main h1 {
@@ -759,7 +776,7 @@ section > .wrapper {
     margin-right: 20px;
   }
 
-  header > .wrapper {
+  header > .wrapper, div#bottom > .wrapper {
     margin: 0 20px;
 
   }
@@ -799,8 +816,17 @@ section > .wrapper {
   section#faq div.questions > ul > li > a > h3 {
     display: block;
     box-shadow: none;
-    border: solid 4px @yellow;
+    border-bottom: 0;
+    // box-shadow: none;
+
     padding: 5px 5px;
+  }
+
+  section#faq div.questions > ul > li > a > h3::before {
+    font-size: 0.7em;
+    content: "▼";
+    padding-right: 8px;
+    color: @yellow;
   }
 
     section#faq div.questions > ul > li > a > img {
