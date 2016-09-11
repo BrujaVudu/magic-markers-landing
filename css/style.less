@@ -546,6 +546,19 @@ body.feedback > h1 {
   font-size: 4em;
 }
 
+#bottom span {
+  padding: 0 10px;
+}
+
+#bottom .text-container {
+  margin-left: -10px;
+}
+
+#bottom .logo {
+  // background-color: @blue;
+  display: none;
+}
+
 /* MEDIA QUERIES
 ====================== */
 
@@ -648,6 +661,18 @@ body.feedback > h1 {
 }
 
 @media screen and (max-width: 820px) {
+
+  #bottom .logo {
+    background-color: @blue;
+    display: block;
+    // max-width: 300px;
+  }
+
+  #bottom .logo img {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px;
+  }
 
   header > .wrapper, div#bottom > .wrapper {
   margin: 0 50px;
