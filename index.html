@@ -10,7 +10,7 @@
 	<meta charset="utf-8">
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/style.min.css?id=0987654">
+	<link rel="stylesheet" type="text/css" href="css/style.min.css?id=8765">
 
 	<script src="https://use.typekit.net/tbn4grx.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -87,7 +87,13 @@
 
 				<div class="col-right">
 					<div class="videoWrapper">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/Sy9kegzWbFs?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen" frameborder="0" allowfullscreen></iframe>
+						<div onclick="this.nextElementSibling.style.display='block'; this.style.display='none'" id="video-wrapper-main">
+						   <!-- <img src="assets/img.jpg" style="cursor:pointer" id="img-principal"/> -->
+						   <div class="video-cover" id="" style="cursor:pointer"></div>
+						</div>
+						<div style="display:none" class="videoWrapperVideo" id="video-main">
+						    <iframe width="560" height="315" src="https://www.youtube.com/embed/Sy9kegzWbFs?modestbranding=1&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+						</div>
 					</div>
 				</div>
 
@@ -112,7 +118,7 @@
 						</li>
 						<li>
 							<div class="videoWrapper">
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/BMpMv97y8jM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen" frameborder="0" allowfullscreen></iframe>
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/6fzKvPgd914?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen" frameborder="0" allowfullscreen></iframe>
 							</div>
 						</li>
 						<li>
@@ -395,6 +401,7 @@ CLIENTES QUE NOS HAN ELEGIDO</h1> -->
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="js/script.js"></script>
 
 </body>
 </html>
