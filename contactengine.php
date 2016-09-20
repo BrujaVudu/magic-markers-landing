@@ -1,11 +1,12 @@
 <?php
 
-$EmailFrom = "chriscoyier@gmail.com";
-$EmailTo = "contacto@magicmarkers.tv";
-$Subject = "Nice & Simple Contact Form by CSS-Tricks";
+$EmailFrom = "josecastrovaron@gmail.com";
+$EmailTo = "josecastrovaron@gmail.com";
+$Subject = "Contacto - Magic Markers";
 $Name = Trim(stripslashes($_POST['Name'])); 
-$Tel = Trim(stripslashes($_POST['Tel'])); 
+$Tel = Trim(stripslashes($_POST['Phone'])); 
 $Email = Trim(stripslashes($_POST['Email'])); 
+$Company = Trim(stripslashes($_POST['Company'])); 
 $Message = Trim(stripslashes($_POST['Message'])); 
 
 // validation
@@ -20,8 +21,11 @@ $Body = "";
 $Body .= "Name: ";
 $Body .= $Name;
 $Body .= "\n";
-$Body .= "Tel: ";
-$Body .= $Tel;
+$Body .= "Phone: ";
+$Body .= $Phone;
+$Body .= "\n";
+$Body .= "Company: ";
+$Body .= $Company;
 $Body .= "\n";
 $Body .= "Email: ";
 $Body .= $Email;
