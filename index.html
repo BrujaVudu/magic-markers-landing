@@ -369,10 +369,10 @@ CLIENTES QUE NOS HAN ELEGIDO</h1> -->
 			
 				<form method="post" action="http://jjcastro.com/contactengine.php">
 					<label for="Name">Nombre:</label>
-					<input type="text" name="Name" id="Name" />
+					<input type="text" name="Name" id="Name" required/>
 
 					<label for="Email">Email:</label>
-					<input type="text" name="Email" id="Email" />
+					<input type="text" name="Email" id="Email" required/>
 					
 					<label for="Phone">Teléfono:</label>
 					<input type="text" name="Phone" id="Phone" />
@@ -381,7 +381,7 @@ CLIENTES QUE NOS HAN ELEGIDO</h1> -->
 					<input type="text" name="Company" id="Company" />
 					
 					<label for="Message">Mensaje:</label><br />
-					<textarea name="Message" rows="20" cols="20" id="Message"></textarea>
+					<textarea name="Message" rows="20" cols="20" id="Message" required></textarea>
 
 					<input type="submit" name="submit" value="Enviar" class="submit-button" />
 				</form>
