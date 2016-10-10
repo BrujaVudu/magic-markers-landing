@@ -608,6 +608,29 @@ div.video-cover {
   transition:        all 0.5s ease;
 }
 
+a.juancastrov-logo > img {
+  width: 25px;
+}
+
+a.juancastrov-logo {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 18px;
+
+  opacity: 0.3;
+
+  right: @border-width;
+}
+
+a.juancastrov-logo:hover {
+  opacity: 0.6;
+}
+
+#bottom {
+  position: relative;
+}
+
 
 
 /* MEDIA QUERIES
@@ -713,13 +736,39 @@ div.video-cover {
 
 @media screen and (max-width: 820px) {
 
+    div.logo {
+    position: relative;
+  }
+
+  a.juancastrov-logo {
+    display: none;
+  }
+
+  a.juancastrov-logo-footer > img {
+    width: 25px !important;
+    height: 25px;
+    margin: 0;
+  }
+
+  a.juancastrov-logo-footer {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+    margin: 0;
+
+    opacity: 0.5;
+
+    right: 30px;
+  }
+
   #bottom .logo {
     background-color: @blue;
     display: block;
     // max-width: 300px;
   }
 
-  #bottom .logo img {
+  #bottom .logo > img {
     width: 200px;
     margin: 20px 20px 30px;
   }
@@ -825,6 +874,8 @@ div.video-cover {
 
 @media screen and (max-width: 785px) {
 
+
+
   body > .wrapper {
     padding-top:  20px;
   }
@@ -908,6 +959,8 @@ div.video-cover {
     section#faq div.questions > ul > li > a > img {
     display: none;
   }
+
+
 }
 
 
